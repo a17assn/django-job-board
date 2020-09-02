@@ -39,6 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+INSTALLED_APPS += [
+    #   My app
+    'job',
+    'blog',
+    'accounts',
+    'home',
+]
+INSTALLED_APPS += [
+    #  add lib
+
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
