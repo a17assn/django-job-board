@@ -8,7 +8,6 @@ Job:
     - salary
     - category
     - experience
-
     - apply job
     - post job.
 
@@ -19,12 +18,12 @@ Blog:
     - category
     - tags
     - auther
-
     - search
     - comment
     - recent post
 
 Contact
+
 Home
 
 Login 
