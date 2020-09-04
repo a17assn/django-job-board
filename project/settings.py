@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "accounts",
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,7 +43,6 @@ INSTALLED_APPS = [
     #   My app
     "job",
     "blog",
-    "accounts",
     "home",
     # library
     "bootstrap4",
