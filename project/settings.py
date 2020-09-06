@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "home",
     # library
     "bootstrap4",
+    "django_filters",
+    
 ]
 
 

@@ -7,6 +7,10 @@ from django.contrib.auth.models import User
 JOB_TYPE = (
     ("Full Time", "Full Time"),
     ("Part Time", "Part Time"),
+    ("Intership", "Intership"),
+    ("Temporary", "Temporary"),
+    ("Freelance", "Freelance"),
+    ("Fixed", "Fixed"),
 )
 # instance = object upload
 def image_upload(instance, filename):
@@ -25,12 +29,11 @@ class Job(models.Model):
     salary = models.IntegerField(default=0)
     experience = models.IntegerField(default=1)
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
-    img = models.ImageField(upload_to=image_upload)
     slug = models.SlugField(blank=True, null=True)
-    
+
     def save(self, *args, **kwargs):
-       self.slug = slugify(self.title)
-       super(Job, self).save(*args, **kwargs) # Call the real save() method
+        self.slug = slugify(self.title)
+        super(Job, self).save(*args, **kwargs)  # Call the real save() method
 
     def __str__(self):
         return self.title
@@ -44,16 +47,13 @@ class Category(models.Model):
 
 
 class Apply(models.Model):
-    job = models.ForeignKey(Job, related_name='apply_job', on_delete=models.CASCADE)
+    job = models.ForeignKey(Job, related_name="apply_job", on_delete=models.CASCADE)
     name = models.CharField(max_length=150)
     email = models.EmailField(max_length=100)
-    website = models.URLField(max_length = 200)
-    cv = models.FileField( upload_to='apply/')
+    website = models.URLField(max_length=200)
+    cv = models.FileField(upload_to="apply/")
     cover_letter = models.TextField(max_length=500)
     created_at = models.DateTimeField(auto_now=True)
-    
-    
 
     def __str__(self):
         return self.name
-
