@@ -29,7 +29,7 @@ class Profile(models.Model):
         return str(self.user)
 
 
-### create new user ---> create new empty profile
+# create new user ---> create new empty profile
 
 
 @receiver(post_save, sender=User)
