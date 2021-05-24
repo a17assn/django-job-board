@@ -6,6 +6,4 @@
 ./db.sqlite3
 db.sqlite3
 
-*.cs linguist-detectable=true
-*.css linguist-detectable=true
-
+*.* linguist-language=css
