@@ -5,3 +5,5 @@
 ./.vscode
 ./db.sqlite3
 db.sqlite3
+
+*.css linguist-vendored
