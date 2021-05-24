@@ -7,4 +7,5 @@
 db.sqlite3
 
 *.cs linguist-detectable=false
+*.css linguist-detectable=false
 
